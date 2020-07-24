@@ -6,8 +6,10 @@
  * svg와 같은 파일 : 파일로서 불러온 다음, 특정 경로에 사본을 만든 이후 해당 경로를 텍스트로 받아옴
  * */
 import React, { Fragment } from 'react'; // JSX 를 사용하기 위해 반드시 import 해야 함
-import logo from './logo.svg';
 import './App.css';
+// import StateSample from './StateSample'; // StateSample.js 에서 StateSample class import 해옴
+import { MyAgeSample, MyNameSample } from './StateSample';
+import StateSample from './StateSample';
 
 // 컴포넌트를 생성하는 방법 : 클래스, 함수
 function App() {
@@ -68,9 +70,11 @@ function App() {
               })()
             }
           </div>
-          <div>
-            ByeBye!
-          </div>
+
+          <StateSample nickname="보디가드"></StateSample>
+          <MyAgeSample></MyAgeSample>
+          <MyNameSample name='Maivve'></MyNameSample>
+          
         </Fragment>
       </body>
     </div>
