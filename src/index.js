@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App'; // 컴포넌트 import 방법
 import * as serviceWorker from './serviceWorker';
 
+// 컴포넌트를 출력하기 위해 ReactDOM.render(param, param) 사용해야 함
+// @param1 : 렌더링 할 결과
+// @param2 : 그릴 DOM
+// DOM은 index.html 에서 확인
 ReactDOM.render(
   <React.StrictMode>
     <App />
