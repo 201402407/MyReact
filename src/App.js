@@ -71,9 +71,10 @@ function App() {
             }
           </div>
 
-          <StateSample nickname="보디가드"></StateSample>
           <MyAgeSample></MyAgeSample>
           <MyNameSample name='Maivve'></MyNameSample>
+          
+          <StateSample nickname="보디가드"></StateSample>
           
         </Fragment>
       </body>
