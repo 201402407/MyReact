@@ -90,7 +90,7 @@ class StateSample extends React.Component {
                     <div>현재 상태(머리) : {this.state.status.brain}</div>
                     <button onClick={this.handleMyStatus}> 내 상태 변경 </button>
                 </div>
-        
+                
             </Fragment>
         );
     };

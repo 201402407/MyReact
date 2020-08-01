@@ -10,6 +10,7 @@ import './App.css';
 // import StateSample from './StateSample'; // StateSample.js 에서 StateSample class import 해옴
 import { MyAgeSample, MyNameSample } from './StateSample';
 import StateSample from './StateSample';
+import ApiTest from './ApiTest';
 
 // 컴포넌트를 생성하는 방법 : 클래스, 함수
 function App() {
@@ -75,7 +76,8 @@ function App() {
           <MyNameSample name='Maivve'></MyNameSample>
           
           <StateSample nickname="보디가드"></StateSample>
-          
+
+          <ApiTest></ApiTest>
         </Fragment>
       </body>
     </div>
