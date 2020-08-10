@@ -8,6 +8,7 @@ class ApiTest extends React.Component {
         car : 'K3'
     };
 
+    // 
     componentDidMount() {
         fetch('/test')
         .then(res => res.json())

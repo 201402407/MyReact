@@ -73,27 +73,65 @@ class StateSample extends React.Component {
             })
     }
     
+    constructor(props) {
+        super(props);
+        console.log("Constructor 호출!");
+    }
+ 
+    static getDerivedStateFromProps(nexProps, prevState) {
+        console.log("getDerivedStateFromProps 호출!");
+        return null;
+    }
+ 
+     componentDidMount() {
+        console.log("componentDidMount 호출!");
+    }
+
+    shouldComponentUpdate(nextprops, nextState)
+    {
+        console.log("sholudComponetUpdate 호출!")
+        return true;
+    }
+
+    componentDidUpdate()
+    {
+        console.log("componentDidUpdate 호출!");
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState)
+    {
+        console.log("getSnapshotBeforeUpdate 호출!")
+        return null;
+    }
+
     render() {
+        console.log("render 호출!")
         return (
-            <Fragment>
-                <div>
-                안녕하세요. 저는 지금 <b>{this.props.nickname}</b> 라는 별명이 있습니다.
-                </div>
-                <div>
-                    <h1>버튼으로 숫자 조정하기</h1>
-                    <div>현재 값 : {this.state.number}</div>
-                    <button onClick={this.handleNumberIncrease}> + 버튼 </button>
-                    <button onClick={this.handleNumberDecrease.bind(this)}> - 버튼 </button>
-                </div>
-                <div>
-                    <div>현재 상태(심장) : {this.state.status.heart}</div>
-                    <div>현재 상태(머리) : {this.state.status.brain}</div>
-                    <button onClick={this.handleMyStatus}> 내 상태 변경 </button>
-                </div>
-                
-            </Fragment>
-        );
-    };
+            <div>안녕하십니까. Render 호출입니다!</div>
+        )
+    }
+
+    // render() {
+    //     return (
+    //         <Fragment>
+    //             <div>
+    //             안녕하세요. 저는 지금 <b>{this.props.nickname}</b> 라는 별명이 있습니다.
+    //             </div>
+    //             <div>
+    //                 <h1>버튼으로 숫자 조정하기</h1>
+    //                 <div>현재 값 : {this.state.number}</div>
+    //                 <button onClick={this.handleNumberIncrease}> + 버튼 </button>
+    //                 <button onClick={this.handleNumberDecrease.bind(this)}> - 버튼 </button>
+    //             </div>
+    //             <div>
+    //                 <div>현재 상태(심장) : {this.state.status.heart}</div>
+    //                 <div>현재 상태(머리) : {this.state.status.brain}</div>
+    //                 <button onClick={this.handleMyStatus}> 내 상태 변경 </button>
+    //             </div>
+
+    //         </Fragment>
+    //     );
+    // };
 }
 
 // props의 기본값 설정 두 번째 방법
